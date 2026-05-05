@@ -1,0 +1,42 @@
+body {
+    background-image: url("https://images.ctfassets.net/nnkxuzam4k38/4BIP4ge9ontCTkNubiY4lb/48121f9d09134fd83670b1d6e182aa66/white-particles-background.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgb(255, 255, 255);
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100vh;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    background-color: white ;
+}
+.navbar-collapse {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.navbar-nav {
+    flex-direction: column !important;
+    width: 100%;
+}
+.fs-7{
+    font-size: 14px;
+}
+.fs-8{
+    font-size: 15px;
+}
+.fs-9{
+    font-size: 12px;
+}
+.fs-attempt{
+    font-size: 12px;
+}
+.pt-6 {
+    padding-top: 65px;
+}
