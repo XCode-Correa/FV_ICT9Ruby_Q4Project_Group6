@@ -6,6 +6,9 @@
     <title>Q4 Skills Test</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <style>
         body{
@@ -13,33 +16,75 @@
             justify-content: center; 
             align-items: center;     
             height: 100vh; 
+            background-color: blueviolet;
+          
         }
+
+        #login{background-color: white;
+            margin: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            width: 500px;
+            height: auto;
+
+        }
+
+        #login h3, label{
+            color: rgba(22, 53, 91);
+            font-family: "Bodoni Moda";
+        }
+
+        #login input, button, a{
+            color: rgb(31, 31, 31);
+            font-family: "Montserrat";
+        }
+
+        i{ color: rgb(31, 31, 31);
+            font-family: "Montserrat";}
+
+        #loginBTN{ color: white;
+            font-family: "Montserrat";
+            background-color: rgba(157, 118, 67);
+                   }
+        
+        #display{font-family: "Montserrat";}
+        
+        input[type=checkbox]{
+        color: rgba(157, 118, 67);
+}
     </style>
 </head>
 <div class="position-fixed bottom-0 end-0 m-3 px-3 py-2 rounded shadow"
-     style="background-color: rgba(128,128,128,0.7); color: white; font-size: 14px;">
+     style="background-color: rgba(22, 53, 91, 0.719); color: white; font-size: 14px; font-family: 'Montserrat';">
     Q4 Project | Group 6 
 </div>
 <body>
 
-<div style="background-color: rgb(255, 255, 255); width: 400px; border-radius: 30px;" class="container text-dark p-3 shadow">
+<!--<div style="background-color: rgb(255, 255, 255); width: 400px; border-radius: 30px;" class="container text-dark p-3 shadow">-->
+    
+<div id="login">  
+    
+    
     <center>
         <img src="https://i.pinimg.com/736x/b9/53/6b/b9536b7ab3447547656e0e05b8eba0ae.jpg" alt="Logo" style="width: auto; height: 150px;">
     </center>
     
-    <div class="text-center">
-        <h2 class="fw-bold">Login</h2>
-    </div>
+
 
     <div class="text-center">
-        <label class="form-label fs-9 fw-bold bg-dark text-light p-1 my-1" style="border-radius: 20px;" for="username">Username</label>
+        <h3 class="fw-bold">Login</h3>
+    </div>
+    <br>
+
+    <div class="text-center">
+        <label class="form-label" style="border-radius: 20px;" for="username">Username</label>
 	    <input type="text" id="username" class="form-control form-control-sm rounded-pill text-center" name="username" placeholder="Enter here" required>
     </div>
 
     <br>
 
     <div class="text-center">
-        <label class="form-label fs-9 fw-bold bg-dark text-light p-1 my-1" style="border-radius: 20px;" for="password">Password</label>
+        <label class="form-label" style="border-radius: 20px;" for="password">Password</label>
 	    <input type="password" id="password" class="form-control form-control-sm rounded-pill text-center" name="password" placeholder="*****" required>
     </div>
 
@@ -47,7 +92,7 @@
 
     <div class="form-check d-flex align-items-center ps-0">
         <input type="checkbox" id="stay" class="form-check-input m-0 me-2" onchange="checkstay()">
-        <label class="form-check-label fs-8 fw-bold" for="stay">Stay logged in.</label>
+        <label class="form-check-label" for="stay">Stay logged in.</label>
     </div>
     
     <p id="msg" class="fs-7 text-dark" style="height: 10px; padding-left: 25px;"></p>
@@ -55,15 +100,17 @@
     <p id="display" style="height: 10px;" class="text-danger fs-attempt text-center"></p>
 
     <div class="text-center">
-        <button style="width: 100px;" type="button" id="loginBTN" name="submit" class="btn btn-dark rounded-pill" onclick="login()">Login</button>
+        <button style="width: 100px;" type="button" id="loginBTN" name="submit" class="btn" onclick="login()">Login</button>
 
-        <a href="index.html"><button style="width: 100px;" type="button" id="submit" name="submit" class="btn btn-light rounded-pill">Cancel</button></a>
+        <a href="index.html"><button style="width: 100px;" type="button" id="submit" name="submit" class="btn btn-light">Cancel</button></a>
     </div>
 
     <div class="text-center">
         <hr class="w-100 mx-auto text-dark"> 
         <a href="#" class="text-dark fs-8 text-decoration-underline">Forgot username / password?</a>
     </div>
+</div>
+
 </div>
 
 <script>
