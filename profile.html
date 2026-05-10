@@ -66,39 +66,6 @@
 
 <br>
 
-<div class="row">
-
-    <div class="col-lg-3">
-
-         <img src="https://i.pinimg.com/736x/1d/ec/e2/1dece2c8357bdd7cee3b15036344faf5.jpg" alt="Logo" style="max-height: 130px; border-radius: 100px;"><br>
-         <h6 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);" >Student Name</6>
-
-    </div>
-
-    <div class="col-lg-7">
-
-        <h3 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);"" >Student Information</h3>
-
-        <br>
-
-        <p>Student ID</p>
-        <p style="color: rgb(31, 31, 31);">123456789</p><br>
-
-         <p>Contact Number</p>
-        <p style="color: rgb(31, 31, 31);">0905-123-4567</p><br>
-
-         <p>Email</p>
-        <p style="color: rgb(31, 31, 31);">user@email.com</p><br>
-
-         <p>Gender</p>
-        <p style="color: rgb(31, 31, 31);">Non-Binary</p><br>
-
-
-    </div>
-
-
-</div>
-
 <div class="container">
 <div class="row">
     <div class="col-3">
@@ -108,21 +75,44 @@
         </div>
     </div>
 
-    <div class="col-3">
-        <div class="shadow bg-light p-3" style="border-radius: 5px;">
-            <img src="https://i.pinimg.com/736x/1d/ec/e2/1dece2c8357bdd7cee3b15036344faf5.jpg" alt="Logo" style="max-height: 130px; border-radius: 100px;"><br>
-            <h6 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);" >Student Name</6>
+    <div class="col-4">
+        <div class="shadow bg-light p-3 text-center d-flex flex-column justify-content-center align-items-center" style="border-radius: 5px; height: 600px;">
+            <img id="profilePic" src="https://i.pinimg.com/736x/1d/ec/e2/1dece2c8357bdd7cee3b15036344faf5.jpg" alt="pfp" style="height: 130px; width: 130px; border-radius: 100px; object-fit: cover;">
+
+            <br><br>
+
+            <input type="file" id="uploadInput" class="form-control form-control-sm" accept="image/*" required>
+            
+            <center>
+                <button style="width: 245px;" type="button" class="btn btn-dark my-2" onclick="upload()">Upload Photo</button>
+            </center>
         </div>
     </div>
 
-    <div class="col-3">
-        <div class="shadow bg-light p-3" style="border-radius: 5px;">
-            <img src="https://i.pinimg.com/736x/1d/ec/e2/1dece2c8357bdd7cee3b15036344faf5.jpg" alt="Logo" style="max-height: 130px; border-radius: 100px;"><br>
-            <h6 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);" >Student Name</6>
+    <div class="col-4">
+        <div class="shadow bg-light p-3" style="border-radius: 5px; height: 600px;">
+            <h3 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);" >Student Information</h3>
+
+            <br>
+
+            <p style="color: rgba(157, 118, 67, 0.719);">Student Name</p>
+            <p style="color: rgb(31, 31, 31);">student</p>
+
+            <p style="color: rgba(157, 118, 67, 0.719);">Student ID</p>
+            <p style="color: rgb(31, 31, 31);">123456789</p>
+
+            <p style="color: rgba(157, 118, 67, 0.719);">Contact Number</p>
+            <p style="color: rgb(31, 31, 31);">+63 9876543210</p>
+
+            <p style="color: rgba(157, 118, 67, 0.719);">Email</p>
+            <p style="color: rgb(31, 31, 31);">user@email.com</p>
+
+            <p style="color: rgba(157, 118, 67, 0.719);">Gender</p>
+            <p style="color: rgb(31, 31, 31);">Non-Binary</p>
         </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-1">
 
     </div>
 </div>
@@ -135,6 +125,24 @@ function handleLogout() {
         window.location.href = "index.html";
     } else {
         window.location.reload();
+    }
+}
+function upload() {
+    const input = document.getElementById("uploadInput");
+    const profilePic = document.getElementById("profilePic");
+
+    const file = input.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            profilePic.src = e.target.result;
+        }
+
+        reader.readAsDataURL(file);
+    } else {
+        alert("Please select an image first.");
     }
 }
 </script>
