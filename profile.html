@@ -32,7 +32,17 @@
     }
     .col-lg-7 {
         font-family: 'Montserrat'; 
-        color: rgba(157, 118, 67);}
+        color: rgba(157, 118, 67);
+    }
+    .change-button{
+            border: 0px;
+            width: 100%;
+            padding: 8px;
+            background-color: rgba(22, 53, 91);
+            color: white;
+            border-radius: 5px;
+            font-family: 'Montserrat';
+        }
     </style>
 </head>
 
@@ -74,7 +84,7 @@
     </div>
 
     <div class="col-4">
-        <div class="shadow bg-light p-3 text-center d-flex flex-column justify-content-center align-items-center" style="border-radius: 5px; height: 600px;">
+        <div class="shadow bg-light p-3 text-center d-flex flex-column justify-content-center align-items-center" style="border-radius: 5px; height: 570px;">
             <img id="profilePic" src="https://i.pinimg.com/736x/1d/ec/e2/1dece2c8357bdd7cee3b15036344faf5.jpg" alt="pfp" style="height: 130px; width: 130px; border-radius: 100px; object-fit: cover;">
 
             <br><br>
@@ -84,7 +94,7 @@
     </div>
 
     <div class="col-4">
-        <div class="shadow bg-light p-3" style="border-radius: 5px; height: 600px;">
+        <div class="shadow bg-light p-3" style="border-radius: 5px; height: 570px;">
             <h3 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);" >Student Information</h3>
 
             <br>
@@ -103,6 +113,9 @@
 
             <p style="color: rgba(157, 118, 67, 0.719);">Gender</p>
             <p style="color: rgb(31, 31, 31);">Non-Binary</p>
+
+            <br>
+            <button class="change-button" onclick="changePassword()">Change Password/Info</button>
         </div>
     </div>
 
@@ -134,6 +147,9 @@ function uploadImage() {
         };
         reader.readAsDataURL(file);
     }
+}
+function changePassword() {
+    alert("Contact your teacher or the institution in order to change personal details or password.");
 }
 </script>
 
