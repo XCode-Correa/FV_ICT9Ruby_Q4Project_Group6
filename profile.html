@@ -90,7 +90,7 @@
             <br>
 
             <p style="color: rgba(157, 118, 67, 0.719);">Student Name</p>
-            <p style="color: rgb(31, 31, 31);">student</p>
+            <p style="color: rgb(31, 31, 31);">SEVCORR</p>
 
             <p style="color: rgba(157, 118, 67, 0.719);">Student ID</p>
             <p style="color: rgb(31, 31, 31);">123456789</p>
@@ -129,11 +129,9 @@ function uploadImage() {
 
     if (file) {
         const reader = new FileReader();
-
         reader.onload = function(e) {
             profilePic.src = e.target.result;
         };
-
         reader.readAsDataURL(file);
     }
 }
