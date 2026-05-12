@@ -10,30 +10,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-
     <style>
-    body {
-        margin-left: 250px;
-    }
-
-    #taskz{background-color: white;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 10px;
-        
-
-    }
-
-    #taskz button{border: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;}
-
-    
-</style>
-
+        body {
+            margin-left: 250px;
+        }
+        h4{
+            font-family: "Bodoni";
+            color: rgba(22, 53, 91);
+        }
+        h6{
+            font-family: "Montserrat";
+            color: rgb(126, 126, 126);
+        }
+        .task-card{
+            border-radius: 5px;
+        }
+        .task-button{
+            border: 0px;
+            width: 100%;
+            padding: 8px;
+            background-color: rgba(22, 53, 91);
+            color: white;
+            border-radius: 5px;
+            font-family: 'Montserrat';
+        }
+        .task-info{
+            font-family: 'Montserrat';
+            color: rgba(157, 118, 67);
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <div class="position-fixed bottom-0 end-0 m-3 px-3 py-2 rounded shadow"
@@ -42,6 +48,7 @@
 </div>
 
 <body>
+
 <nav class="navbar navbar-expand-lg shadow">
     <div class="d-flex flex-column align-items-stretch w-100 p-0">
         <div class="w-100 d-flex justify-content-center">
@@ -64,111 +71,111 @@
 
 <br>
 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="shadow bg-light p-3" style="border-radius: 5px;">
+                <h2 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);">
+                    <b>TASKS</b>
+                </h2>
+                <p style="font-size: 15px; font-family: 'Montserrat'; color: rgba(157, 118, 67);">
+                    See tasks to accomplish.
+                </p>
+            </div>
+        </div>
 
+        <div class="col-lg-8">
+            <div class="row g-3">
+                <div class="col-6">
+                    <div class="shadow bg-light p-4 task-card">
+                        <h4><b>ICT</b></h4>
+                        <br>
+                        <p class="task-info">Project</p>
+                        <p class="task-info">
+                            Deadline: May 8, 2026 @ 2:30 PM
+                        </p>
+                        <button class="task-button">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="shadow bg-light p-4 task-card">
+                        <h4><b>English</b></h4>
+                        <br>
+                        <p class="task-info">Project Proposal</p>
+                        <p class="task-info">
+                            Deadline: May 15, 2026 @ 5:00 PM
+                        </p>
+                        <button class="task-button">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-6">
+                    <div class="shadow bg-light p-4 task-card">
+                        <h4><b>Filipino</b></h4>
+                        <br>
+                        <p class="task-info">Project</p>
+                        <p class="task-info">Deadline: May 15, 2026 @ 11:59 PM</p>
+                        <button class="task-button">Submit</button>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="shadow bg-light p-4 task-card">
+                        <h4><b>Social Studies</b></h4>
+                        <br>
+                        <p class="task-info">Quiz</p>
+                        <p class="task-info">Deadline: May 10, 2026</p>
+                        <button class="task-button">Take Activity</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-6">
+                    <div class="shadow bg-light p-4 task-card">
+                        <h4><b>Math</b></h4>
+                        <br>
+                        <p class="task-info">Quiz</p>
+                        <p class="task-info">Deadline: May 9, 2026</p>
+                        <button class="task-button">Take Activity</button>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="shadow bg-light p-4 task-card">
+                        <h4><b>LT/LOP</b></h4>
+                        <br>
+                        <p class="task-info">Practicals</p>
+                        <p class="task-info">Deadline: May 10, 2026</p>
+                        <button class="task-button">
+                            Take Activity
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+</div>
 
 <br>
-
-       <div class="col-lg-3">
-        <div class="shadow bg-light p-3" style="border-radius: 5px;">
-            <h2 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);"><b>TASKS</b></h2>
-            <p style="font-size: 15px; font-family: 'Montserrat'; color: rgba(157, 118, 67);">Oversee tasks to accomplish.</p>
-        </div>
-    </div>
-
-    <div class="row">
-
-        <div class="col-4" id="taskz">
-
-            <h4 style="font-family: 'Bodoni'; color: rgba(22, 53, 91); font-weight: bold;">ICT</h4>
-            <br><br>
-
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Project</p>
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Deadline: May 8, 2026 @ 2:30 PM</p>
-
-            <button style="font-family: 'Montserrat'; background-color: rgba(22, 53, 91); color: white;">Submit</button>
-
-        </div>
-
-        <div class="col-4" id="taskz">
-
-            <h5 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);">English</h5>
-            <br><br>
-
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Project Proposal</p>
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Deadline: May 15, 2026 @ 5:00 PM</p>
-
-            <button style="font-family: 'Montserrat'; background-color: rgba(22, 53, 91); color: white;">Submit</button>
-
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col-4" id="taskz">
-
-            <h5 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);">Filipino</h5>
-            <br><br>
-
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Project</p>
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Deadline: May 15, 2026 @ 11:59 PM</p>
-
-            <button style="font-family: 'Montserrat'; background-color: rgba(22, 53, 91); color: white;">Submit</button>
-
-        </div>
-
-        <div class="col-4" id="taskz">
-
-            <h5 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);">Social Studies</h5>
-            <br><br>
-
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Quiz</p>
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Deadline: May 10, 2026 </p>
-
-            <button style="font-family: 'Montserrat'; background-color: rgba(22, 53, 91); color: white;">Take Activity</button>
-
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col-4" id="taskz">
-
-            <h5 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);">Math</h5>
-            <br><br>
-
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Quiz</p>
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Deadline: May 9, 2026 </p>
-
-            <button style="font-family: 'Montserrat'; background-color: rgba(22, 53, 91); color: white;">Take Activity</button>
-
-        </div>
-
-        <div class="col-4" id="taskz">
-
-            <h5 style="font-family: 'Bodoni'; color: rgba(22, 53, 91);">LT/LOP</h5>
-            <br><br>
-
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Practicals</p>
-            <p style="font-family: 'Montserrat'; color: rgba(157, 118, 67);">Deadline: May 10, 2026 </p>
-
-            <button style="font-family: 'Montserrat'; background-color: rgba(22, 53, 91); color: white;">Take Activity</button>
-
-        </div>
-
-    </div>
-
 
 <script>
 function handleLogout() {
     if (confirm("Are you sure?")) {
         window.location.href = "index.html";
-    } else {
+    }
+    else {
         window.location.reload();
     }
 }
 </script>
-
 </body>
 </html>
